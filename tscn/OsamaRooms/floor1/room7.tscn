@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://5atwk52fkksf"]
+
+[ext_resource type="Script" uid="uid://d3jgipb3dlw8l" path="res://scripts/room.gd" id="1_fqfy4"]
+[ext_resource type="Texture2D" uid="uid://ni4a4ke0e8i8" path="res://tscn/OsamaRooms/floor1/osama1.png" id="2_27sd2"]
+[ext_resource type="Texture2D" uid="uid://d3qulektjun78" path="res://tscn/OsamaRooms/floor1/WALLUP.png" id="3_x0bmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_we5va"]
+size = Vector2(2059, 1077)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_womr6"]
+size = Vector2(2092, 184.4706)
+
+[node name="Room" type="Area2D" unique_id=198948550]
+script = ExtResource("1_fqfy4")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=1152953042]
+offset_right = 2060.0
+offset_bottom = 1080.0
+texture = ExtResource("2_27sd2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=703576107]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2124571527]
+position = Vector2(1030.5, 539.5)
+shape = SubResource("RectangleShape2D_we5va")
+
+[node name="Doors" type="Node2D" parent="." unique_id=787987567]
+position = Vector2(132.77, -4)
+scale = Vector2(0.865, 0.865)
+
+[node name="DoorTop" type="Marker2D" parent="Doors" unique_id=1158438006]
+position = Vector2(1037.2601, 89.017334)
+
+[node name="DoorBottom" type="Marker2D" parent="Doors" unique_id=529509059]
+position = Vector2(1034.948, 1167.6301)
+
+[node name="DoorLeft" type="Marker2D" parent="Doors" unique_id=866272818]
+position = Vector2(-71.41, 627.746)
+
+[node name="walls" type="Node2D" parent="." unique_id=1456101695]
+
+[node name="WallDown" type="Sprite2D" parent="walls" unique_id=1894477749]
+position = Vector2(512.9545, 997.0002)
+rotation = 3.1415925
+scale = Vector2(0.50575304, 0.9398483)
+texture = ExtResource("3_x0bmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls/WallDown" unique_id=39576455]
+visible = false
+position = Vector2(-1.1696167, -5.4317627)
+rotation = -3.1415925
+scale = Vector2(0.99209315, 1.0640014)
+shape = SubResource("RectangleShape2D_womr6")
+
+[node name="WallDown2" type="Sprite2D" parent="walls" unique_id=2099098844]
+position = Vector2(1551, 997)
+rotation = 3.1415925
+scale = Vector2(0.5037635, 0.9321019)
+texture = ExtResource("3_x0bmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls/WallDown2" unique_id=2137394454]
+visible = false
+position = Vector2(-1.1696167, -5.4317627)
+rotation = -3.1415925
+scale = Vector2(0.99209315, 1.0640014)
+shape = SubResource("RectangleShape2D_womr6")
+
+[node name="WallRight" type="Sprite2D" parent="walls" unique_id=298984695]
+position = Vector2(1982.0001, 538.00006)
+rotation = 1.5707964
+scale = Vector2(0.3703872, 0.9308097)
+texture = ExtResource("3_x0bmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls/WallRight" unique_id=248234191]
+visible = false
+position = Vector2(-1.1696167, -5.4317627)
+rotation = -3.1415925
+scale = Vector2(0.99209315, 1.0640014)
+shape = SubResource("RectangleShape2D_womr6")
+
+[node name="WallLeft" type="Sprite2D" parent="walls" unique_id=1518420685]
+position = Vector2(61.177612, 541.45935)
+rotation = -1.5707964
+scale = Vector2(0.3694253, 0.7171703)
+texture = ExtResource("3_x0bmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls/WallLeft" unique_id=62738529]
+visible = false
+position = Vector2(-1.1696167, -5.4317627)
+rotation = -3.1415925
+scale = Vector2(0.99209315, 1.0640014)
+shape = SubResource("RectangleShape2D_womr6")
+
+[node name="WallUp" type="Sprite2D" parent="walls" unique_id=2122102283]
+position = Vector2(513.2073, 80.000046)
+scale = Vector2(0.5052702, 0.8979587)
+texture = ExtResource("3_x0bmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls/WallUp" unique_id=1126755905]
+visible = false
+position = Vector2(-1.1696167, -5.4317627)
+rotation = -3.1415925
+scale = Vector2(0.99209315, 1.0640014)
+shape = SubResource("RectangleShape2D_womr6")
+
+[node name="WallUp2" type="Sprite2D" parent="walls" unique_id=1482348031]
+position = Vector2(1551.5001, 79.879524)
+scale = Vector2(0.50265574, 0.88898444)
+texture = ExtResource("3_x0bmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls/WallUp2" unique_id=1315350517]
+visible = false
+position = Vector2(-1.1696167, -5.4317627)
+rotation = -3.1415925
+scale = Vector2(0.99209315, 1.0640014)
+shape = SubResource("RectangleShape2D_womr6")
